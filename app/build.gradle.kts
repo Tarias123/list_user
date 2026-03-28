@@ -60,6 +60,9 @@ dependencies {
     // Picasso
     implementation(libs.picasso)
 
+    // Facebook
+    implementation(libs.facebook.android.sdk)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

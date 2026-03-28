@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="32dp"
+        android:paddingBottom="40dp">
+
+        <!-- Flecha volver -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="24dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/colorText"
+            android:contentDescription="Volver" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Crear Cuenta"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="36dp"
+            android:text="Completa los datos para registrarte"
+            android:textSize="15sp"
+            android:textColor="@color/colorTextSecondary" />
+
+        <!-- Campo Nombre -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre completo"
+            app:hintTextColor="@color/colorTextSecondary"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxBackgroundColor="#1F7c4dff"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorTextSecondary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Correo electrónico"
+            app:hintTextColor="@color/colorTextSecondary"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxBackgroundColor="#1F7c4dff"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorTextSecondary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Contraseña"
+            app:hintTextColor="@color/colorTextSecondary"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxBackgroundColor="#1F7c4dff"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorTextSecondary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:imeOptions="actionNext"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorTextSecondary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo Confirmar Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Confirmar contraseña"
+            app:hintTextColor="@color/colorTextSecondary"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxBackgroundColor="#1F7c4dff"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorTextSecondary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorTextSecondary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón Registrarse -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:text="Registrarse"
+            android:textSize="16sp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="50dp"
+            app:elevation="6dp" />
+
+        <!-- Ya tienes cuenta -->
+        <TextView
+            android:id="@+id/tvIniciarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="¿Ya tienes cuenta? Inicia sesión"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</ScrollView>

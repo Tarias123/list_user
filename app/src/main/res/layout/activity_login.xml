@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="32dp"
+        android:paddingBottom="40dp">
+
+        <!-- Logo ic_user -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_user"
+            android:contentDescription="Logo" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorText" />
+
+        <!-- Subtítulo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="36dp"
+            android:text="Inicia sesión para continuar"
+            android:textSize="15sp"
+            android:textColor="@color/colorTextSecondary" />
+
+        <!-- Campo Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico"
+            app:hintTextColor="@color/colorTextSecondary"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxBackgroundColor="@color/colorSurface"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorTextSecondary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Error Email -->
+        <TextView
+            android:id="@+id/tvErrorEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textColor="#f44336"
+            android:visibility="gone" />
+
+        <!-- Campo Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Contraseña"
+            app:hintTextColor="@color/colorTextSecondary"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:boxBackgroundColor="@color/colorSurface"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorTextSecondary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorTextSecondary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Error Password -->
+        <TextView
+            android:id="@+id/tvErrorPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textColor="#f44336"
+            android:visibility="gone" />
+
+        <!-- Olvidaste tu contraseña -->
+        <TextView
+            android:id="@+id/tvOlvidePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="28dp"
+            android:text="¿Olvidaste tu contraseña?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Botón Iniciar Sesión -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Iniciar Sesión"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="50dp"
+            app:elevation="4dp" />
+
+        <!-- Divisor -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="28dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/colorTextSecondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:text="O continúa con"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/colorTextSecondary" />
+
+        </LinearLayout>
+
+        <!-- Botón Google -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Continuar con Google"
+            android:textColor="@color/colorText"
+            android:textSize="15sp"
+            app:backgroundTint="@color/colorSurface"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/colorTextSecondary"
+            app:strokeWidth="1dp"
+            app:icon="@drawable/ic_google"
+            app:iconSize="20dp"
+            app:iconTint="@null" />
+
+        <!-- Botón Facebook (deshabilitado) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:text="Continuar con Facebook"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="15sp"
+            android:enabled="true"
+            app:backgroundTint="@color/colorSurface"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/colorTextSecondary"
+            app:strokeWidth="1dp"
+            app:icon="@drawable/ic_facebook"
+            app:iconSize="20dp"
+            app:iconTint="@null" />
+
+        <!-- Registrarse -->
+        <TextView
+            android:id="@+id/tvRegistrarse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="¿No tienes cuenta? Regístrate"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</ScrollView>
